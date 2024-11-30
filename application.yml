@@ -19,4 +19,4 @@ spring:
       data-locations: classpath:data.sql
 
 server:
-  port: 8081
+  port: 8082
