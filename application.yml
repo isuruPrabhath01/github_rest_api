@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: erp_service
+  datasource:
+    url: jdbc:mysql://localhost:3306/pos_erp_devDb?createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: true
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
+      data-locations: classpath:data.sql
+
+server:
+  port: 8081
